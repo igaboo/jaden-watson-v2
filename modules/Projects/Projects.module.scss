@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+.container {
+  h3 {
+    margin-top: 240px;
+  }
+}
+
+.tags {
+  margin-top: 44px;
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+  margin-top: 100px;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-bottom: 28px;
+
+    h4 {
+      margin-right: 1rem;
+    }
+  }
+
+  .card {
+    position: relative;
+
+    min-width: 600px;
+    height: 335px;
+
+    border: 1px solid $bg-accent;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.projectContainer:not(:first-of-type) {
+  margin-top: 5rem;
+  flex-direction: row-reverse;
+}
+
+.smallProjectContainer {
+  margin-top: 100px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 58px;
+
+  .card {
+    padding: 34px;
+    border: 1px solid $bg-accent;
+    border-bottom: 5px solid $bg-accent;
+
+    border-radius: 10px;
+  }
+}

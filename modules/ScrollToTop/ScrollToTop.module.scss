@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.icon {
+  position: fixed;
+  right: 1rem;
+  bottom: -4rem;
+  z-index: 1;
+  cursor: pointer;
+
+  transition: bottom $animation ease;
+
+  color: $clr;
+}

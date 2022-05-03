@@ -1,0 +1,12 @@
+.container {
+  max-width: 800px;
+  text-align: center;
+
+  display: flex;
+  gap: 60px;
+
+  button {
+    width: fit-content;
+    margin-inline: auto;
+  }
+}

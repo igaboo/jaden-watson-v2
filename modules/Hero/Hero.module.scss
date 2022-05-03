@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.container {
+  span {
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    width: fit-content;
+
+    color: $clr;
+  }
+}

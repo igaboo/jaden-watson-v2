@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  padding: 1rem;
+
+  max-width: $width-wide;
+  margin-inline: auto;
+
+  h5 {
+    text-align: center;
+  }
+}
+
+.icons {
+  margin-left: auto;
+
+  button:not(:first-child) {
+    margin-left: 1rem;
+  }
+}

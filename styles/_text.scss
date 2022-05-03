@@ -1,0 +1,192 @@
+@import "./variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+  color: $txt;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+code {
+  cursor: pointer;
+
+  padding: 5px 10px;
+
+  border: 1px solid $bg-accent;
+  border-radius: 5px;
+
+  transition-property: border, background-color, color;
+  transition-duration: $animation-quick;
+}
+
+code:not(:first-child) {
+  margin-left: 1rem;
+}
+
+code:hover {
+  border: 1px solid $clr;
+  background-color: $clr;
+  color: $bg;
+}
+
+.hero {
+  font-weight: 500;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.hero::before {
+  content: "Jaden";
+  position: relative;
+
+  color: $txt-accent;
+}
+
+.hero::after {
+  content: " Watson";
+  color: $txt;
+
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 125px;
+  font-weight: 700;
+
+  transform-origin: 50% 50%;
+
+  line-height: 1;
+}
+
+h2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: $txt-accent;
+
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+
+h3::before {
+  content: "{";
+  color: $txt-accent;
+}
+
+h3::after {
+  content: "}";
+  color: $txt-accent;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  color: $txt-accent;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 500;
+
+  color: $txt-accent;
+}
+
+.paragraph {
+  max-width: 600px;
+}
+
+.mini {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.heavy {
+  font-size: 24px;
+  font-weight: 600;
+  color: $txt;
+}
+
+.highlighted {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.code {
+  color: $txt;
+}
+
+.code::after {
+  content: "/>";
+
+  color: $txt-accent;
+}
+
+.code::before {
+  content: "<";
+
+  color: $txt-accent;
+
+  position: absolute;
+  margin-left: -0.7em;
+}
+
+@media screen and (max-width: 1600px) {
+  .code::before {
+    position: relative;
+    margin-left: 0;
+  }
+}
+
+.code-inline {
+  color: $txt;
+}
+
+.code-inline::after {
+  content: "/>";
+
+  color: $txt-accent;
+}
+
+.code-inline::before {
+  content: "<";
+
+  color: $txt-accent;
+}
+
+.underline {
+  position: relative;
+
+  color: $txt;
+}
+
+.underline::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 60%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: $bg-light;
+}

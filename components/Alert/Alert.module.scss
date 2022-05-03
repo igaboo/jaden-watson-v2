@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+
+.container {
+  margin-top: 100px;
+  text-align: center;
+
+  svg {
+    color: $txt-accent;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $txt;
+  }
+
+  a {
+    position: relative;
+
+    transition: color $animation ease;
+  }
+
+  a:hover {
+    color: $bg;
+  }
+
+  a::after {
+    content: "";
+
+    z-index: -1;
+
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition-property: top, background-color;
+    transition-duration: $animation;
+
+    background-color: $clr-dimmed;
+  }
+
+  a:hover::after {
+    top: 0;
+
+    background-color: $clr;
+  }
+}

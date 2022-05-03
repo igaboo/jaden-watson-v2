@@ -1,0 +1,39 @@
+@import "./variables";
+
+button {
+  cursor: pointer;
+  user-select: none;
+
+  border-radius: 10rem;
+  border: none;
+
+  padding: 17px 41px;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  background-color: $clr;
+  color: $bg;
+
+  transition: background-color $animation ease;
+
+  &:hover {
+    background-color: $clr-dark;
+  }
+}
+
+.icon {
+  font-size: inherit;
+
+  padding: 0;
+
+  color: $clr;
+  background-color: transparent;
+
+  transition: color $animation ease;
+
+  &:hover {
+    color: $clr-dark;
+    background-color: transparent;
+  }
+}

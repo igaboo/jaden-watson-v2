@@ -1,0 +1,58 @@
+@use "./resets";
+@use "./text";
+@use "./modules";
+@import "./variables";
+
+/* Scroll bar experimental properties */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $clr-dimmed;
+
+  border-radius: 10rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $clr;
+
+  border-radius: 10rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $clr-dark;
+}
+
+hr {
+  max-width: calc($width - 2rem);
+  border: 1px solid $bg-accent;
+
+  margin-inline: auto;
+  // margin-block: 250px;
+}
+
+.container {
+  max-width: $width;
+  min-height: calc(100vh - 5rem - 300px);
+
+  margin-inline: auto;
+  margin-block: 150px;
+
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: 0px;
+  visibility: hidden;
+
+  margin: 0;
+  padding: 0;
+}
