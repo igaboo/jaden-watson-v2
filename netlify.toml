@@ -1,2 +1,2 @@
 [build]
-command = "CI= next export"
+command = "CI= yarn build"
