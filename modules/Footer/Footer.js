@@ -10,17 +10,21 @@ function Footer() {
   return (
     <div className={styles.container}>
       <p className="hero"></p>
-      <h5>Designed and built by Jaden ❤️</h5>
+      <h5>
+        <a href="https://github.com/igaboo/jaden-watson-v2">
+          Designed and built by Jaden ❤️
+        </a>
+      </h5>
       <div className={styles.icons}>
-        <button className="icon">
+        <a href="https://twitter.com/oobagi" className="icon">
           <FontAwesomeIcon icon={faTwitter} size="2x" />
-        </button>
-        <button className="icon">
+        </a>
+        <a href="https://github.com/igaboo" className="icon">
           <FontAwesomeIcon icon={faGithub} size="2x" />
-        </button>
-        <button className="icon">
+        </a>
+        <a href="" className="icon">
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
-        </button>
+        </a>
       </div>
     </div>
   );

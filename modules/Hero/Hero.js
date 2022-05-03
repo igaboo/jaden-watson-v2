@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Hero.module.scss";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -21,16 +22,18 @@ const Hero = () => {
         <h1>Hi, I'm Jaden</h1>
         <h2>I'm a designer & front-end developer.</h2>
         <span>
-          <button>& I'm here to help</button>
-          <button className="icon">
+          <Link href="/#contact">
+            <a className="button">& I'm here to help</a>
+          </Link>
+          <a href="https://twitter.com/oobagi" className="icon">
             <FontAwesomeIcon icon={faTwitter} size="3x" />
-          </button>
-          <button className="icon">
+          </a>
+          <a href="https://github.com/igaboo" className="icon">
             <FontAwesomeIcon icon={faGithub} size="3x" />
-          </button>
-          <button className="icon">
+          </a>
+          <a className="icon">
             <FontAwesomeIcon icon={faLinkedin} size="3x" />
-          </button>
+          </a>
         </span>
       </section>
     </motion.div>
