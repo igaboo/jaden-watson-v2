@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import Animate from "../modules/wrappers/Animate";
 

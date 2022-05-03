@@ -1,7 +1,5 @@
 import styles from "./Projects.module.scss";
 
-import Image from "next/image";
-
 import Alert from "../../components/Alert/Alert";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -91,7 +89,7 @@ const Project = ({ project }) => {
         </div>
       </div>
       <div className={styles.card}>
-        <Image src={project.image} layout="fill" objectFit="cover" />
+        <img src={project.image} />
       </div>
     </div>
   );

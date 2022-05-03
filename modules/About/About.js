@@ -6,7 +6,6 @@ import {
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 
 import styles from "./About.module.scss";
 
@@ -59,7 +58,7 @@ const About = () => {
           </div>
         </div>
         <div className="item">
-          <Image src="/hero.jpg" width={600} height={600} />
+          <img src="/hero.jpg" width={600} height={600} />
         </div>
       </div>
     </section>
