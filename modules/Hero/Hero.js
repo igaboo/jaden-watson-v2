@@ -9,6 +9,7 @@ import styles from "./Hero.module.scss";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
@@ -20,7 +21,12 @@ const Hero = () => {
     >
       <section className={`container ${styles.container}`}>
         <h1>Hi, I'm Jaden</h1>
-        <h2>I'm a designer & front-end developer.</h2>
+        <h2>
+          I'm a designer & front-end developer.{" "}
+          <a className="icon" href="/resume.pdf" download>
+            <FontAwesomeIcon icon={faFileArrowDown} />
+          </a>
+        </h2>
         <span>
           <Link href="/#contact">
             <a className="button">& I'm here to help</a>
