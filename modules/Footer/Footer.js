@@ -9,7 +9,6 @@ import styles from "./Footer.module.scss";
 function Footer() {
   return (
     <div className={styles.container}>
-      <p className="hero"></p>
       <h5>
         <a href="https://github.com/igaboo/jaden-watson-v2">
           Designed and built by Jaden ❤️

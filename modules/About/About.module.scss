@@ -7,6 +7,8 @@
 
   img {
     border-radius: 10px;
+
+    height: auto;
   }
 }
 
@@ -14,6 +16,7 @@
   display: grid;
   justify-content: space-between;
   grid-template-columns: auto auto;
+  gap: 5rem;
 }
 
 .cards {
@@ -36,5 +39,24 @@
 
   svg {
     color: $txt-accent;
+
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 28px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 10px;
+    grid-template-columns: 40px 1fr;
   }
 }

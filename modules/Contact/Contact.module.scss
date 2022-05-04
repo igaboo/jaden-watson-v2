@@ -5,6 +5,10 @@
   display: flex;
   gap: 60px;
 
+  h2 {
+    margin-inline: auto;
+  }
+
   button {
     width: fit-content;
     margin-inline: auto;

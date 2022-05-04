@@ -39,7 +39,7 @@ hr {
   margin-inline: auto;
   margin-block: 150px;
 
-  padding: 1rem;
+  padding: 5rem;
 
   display: flex;
   flex-direction: column;
@@ -55,4 +55,18 @@ hr {
 
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: $width-mobile;
+
+    padding: 1rem;
+
+    min-height: none;
+    margin-block: 100px;
+  }
+
+  hr {
+  }
 }

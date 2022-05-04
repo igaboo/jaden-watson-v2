@@ -11,5 +11,17 @@
     width: fit-content;
 
     color: $clr;
+
+    svg {
+      font-size: clamp(30px, 5vw, 45px);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    span {
+      gap: 10px;
+    }
   }
 }

@@ -10,7 +10,7 @@ button,
 
   padding: 17px 41px;
 
-  font-size: 24px;
+  font-size: clamp(14px, 1.5vw, 24px);
   font-weight: 600;
 
   background-color: $clr;
@@ -36,5 +36,16 @@ button,
   &:hover {
     color: $clr-dark;
     background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  button,
+  .button {
+    padding: 7px 17px;
+  }
+
+  .icon:not([id]) {
+    font-size: inherit;
   }
 }

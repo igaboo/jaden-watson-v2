@@ -12,9 +12,10 @@ import styles from "./About.module.scss";
 const About = () => {
   return (
     <section className={`container ${styles.container}`}>
+      <h2 className="code">About Me </h2>
+
       <div className={styles.grid}>
         <div className="item">
-          <h2 className="code">About Me </h2>
           <p className="paragraph">
             Hi! I'm Jaden. I'm currently a student at Sierra College, working
             towards achieving my AS-T degree in computer science, which will

@@ -13,7 +13,9 @@ function ScrollToTop({ visible }) {
 
   return (
     <FontAwesomeIcon
-      style={{ bottom: visible ? "4rem" : "-4rem" }}
+      style={{
+        bottom: visible ? "5rem" : "-4rem",
+      }}
       className={`icon ${styles.icon}`}
       icon={faSquareCaretUp}
       size="4x"

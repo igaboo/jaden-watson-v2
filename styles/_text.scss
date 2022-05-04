@@ -14,6 +14,10 @@ a {
 code {
   cursor: pointer;
 
+  display: inline-block;
+
+  margin-bottom: 10px;
+
   padding: 5px 10px;
 
   border: 1px solid $bg-accent;
@@ -23,8 +27,8 @@ code {
   transition-duration: $animation-quick;
 }
 
-code:not(:first-child) {
-  margin-left: 1rem;
+code:not(:last-child) {
+  margin-right: 1rem;
 }
 
 code:hover {
@@ -34,6 +38,7 @@ code:hover {
 }
 
 .hero {
+  font-size: 24px;
   font-weight: 500;
 
   padding: 0;
@@ -61,7 +66,7 @@ code:hover {
 }
 
 h1 {
-  font-size: 125px;
+  font-size: clamp(42px, 5vw, 125px);
   font-weight: 700;
 
   transform-origin: 50% 50%;
@@ -70,15 +75,19 @@ h1 {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: clamp(25px, 3vw, 45px);
   font-weight: 600;
   color: $txt-accent;
 
   line-height: 1.5;
+
+  div {
+    display: inline;
+  }
 }
 
 h3 {
-  font-size: 35px;
+  font-size: clamp(20px, 3vw, 35px);
   font-weight: 600;
   text-align: center;
 }
@@ -94,7 +103,7 @@ h3::after {
 }
 
 h4 {
-  font-size: 30px;
+  font-size: clamp(20px, 2vw, 30px);
   font-weight: 600;
 }
 
@@ -105,7 +114,7 @@ h5 {
 }
 
 p {
-  font-size: 24px;
+  font-size: clamp(18px, 2vw, 24px);
   font-weight: 500;
 
   color: $txt-accent;
@@ -189,4 +198,18 @@ p {
   right: 0;
 
   background-color: $bg-light;
+}
+
+@media screen and (max-width: 900px) {
+  h2 div {
+    display: block;
+  }
+
+  .paragraph {
+    max-width: none;
+  }
+
+  .heavy {
+    font-size: 18px;
+  }
 }

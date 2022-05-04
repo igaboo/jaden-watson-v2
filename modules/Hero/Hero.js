@@ -22,10 +22,13 @@ const Hero = () => {
       <section className={`container ${styles.container}`}>
         <h1>Hi, I'm Jaden</h1>
         <h2>
-          I'm a designer & front-end developer.{" "}
-          <a className="icon" href="/resume.pdf" download>
-            <FontAwesomeIcon icon={faFileArrowDown} />
-          </a>
+          I'm a designer &{" "}
+          <div>
+            front-end developer.{" "}
+            <a className="icon" href="/resume.pdf" download>
+              <FontAwesomeIcon icon={faFileArrowDown} />
+            </a>
+          </div>{" "}
         </h2>
         <span>
           <Link href="/#contact">

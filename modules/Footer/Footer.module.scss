@@ -2,16 +2,12 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   padding: 1rem;
 
   max-width: $width-wide;
   margin-inline: auto;
-
-  h5 {
-    text-align: center;
-  }
 }
 
 .icons {
@@ -19,5 +15,20 @@
 
   a:not(:first-child) {
     margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    gap: 1rem;
+  }
+
+  .icons {
+    margin-left: 0;
   }
 }

@@ -3,6 +3,7 @@
 .container {
   h2 {
     text-align: center;
+    margin-inline: auto;
   }
 }
 
@@ -60,10 +61,32 @@
 
 .options:not(:first-of-type) {
   margin-top: 60px;
-}
 
-.options:not(:first-of-type) {
   .option {
     padding: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .options {
+    margin-top: 50px;
+  }
+
+  .options:not(:first-of-type) {
+    grid-template-columns: 1fr;
+
+    margin-top: 10px;
+
+    .option {
+      border-left: none;
+    }
+  }
+
+  .options .option {
+    padding: 20px;
+  }
+
+  .options .option svg {
+    margin-bottom: 20px;
   }
 }

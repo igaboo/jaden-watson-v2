@@ -1,0 +1,116 @@
+$accent: #cacaca;
+$background: rgb(255, 255, 255);
+$text: rgb(231, 231, 231);
+$text-secondary: rgb(158, 158, 158);
+$text-accent: rgb(126, 126, 126);
+$dim: rgb(54, 54, 54);
+
+$active: rgb(66, 189, 255);
+$hover: rgb(41, 41, 41);
+
+$animation-time: 200ms;
+
+.btn-icon:hover {
+  filter: brightness(0.8);
+}
+
+.dropdownWrapper {
+  position: relative;
+
+  user-select: none;
+}
+
+.wrapper {
+  transition: all $animation-time ease;
+}
+
+.deactivated {
+  transform: scale(0.8);
+}
+
+.activated {
+  transform: scale(1);
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.1);
+
+  overflow: hidden;
+
+  border-radius: 10px;
+  border: 1px solid $accent;
+
+  background-color: $background;
+
+  position: absolute;
+
+  transition: opacity $animation-time ease, visibility $animation-time ease;
+
+  button {
+    background-color: transparent;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 5px;
+
+    cursor: pointer;
+    font: inherit;
+    font-weight: 500;
+
+    color: $text;
+
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.collapsed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.expanded {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card {
+  border-radius: 10px;
+  border: 1px solid $dim;
+
+  margin-inline: auto;
+
+  max-width: 30rem;
+  width: 100%;
+
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  header {
+    flex-direction: column;
+
+    border: none;
+  }
+
+  footer {
+    margin-top: auto;
+
+    border-top: 1px solid $dim;
+  }
+}
+
+.card + .card {
+  margin-top: 1rem;
+
+  header {
+    flex-direction: row;
+  }
+}
