@@ -1,4 +1,10 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faListSquares,
+  faMessage,
+  faMoneyBill,
+  faQuestion,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useReducer } from "react";
@@ -60,10 +66,20 @@ const Navbar = () => {
               icon={faBars}
               buttons={[
                 {
-                  icon: faBars,
-                  color: "215, 51, 51",
-                  text: "Test",
-                  func: () => alert("apple function"),
+                  icon: faQuestion,
+                  text: "About",
+                },
+                {
+                  icon: faListSquares,
+                  text: "Projects",
+                },
+                {
+                  icon: faMoneyBill,
+                  text: "Hire",
+                },
+                {
+                  icon: faMessage,
+                  text: "Contact",
                 },
               ]}
               position="top-right"
