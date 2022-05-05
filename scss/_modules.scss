@@ -8,9 +8,9 @@ button,
   border-radius: 10rem;
   border: none;
 
-  padding: 17px 41px;
+  padding: clamp(7px, 1.75vw, 17px) clamp(17px, 2vw, 41px);
 
-  font-size: clamp(14px, 1.5vw, 24px);
+  font-size: clamp(14px, 2vw, 24px);
   font-weight: 600;
 
   background-color: $clr;
@@ -47,10 +47,10 @@ button,
 }
 
 @media screen and (max-width: 900px) {
-  button,
-  .button {
-    padding: 7px 17px;
-  }
+  // button,
+  // .button {
+  //   padding: 7px 17px;
+  // }
 
   .icon:not([id]) {
     font-size: inherit;
