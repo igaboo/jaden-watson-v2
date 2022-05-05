@@ -35,16 +35,19 @@ const smallProjects = [
     title: "Hangman Game",
     description: "A simple hangman game written with plain JavaScript.",
     tags: ["JAVASCRIPT", "HTML", "CSS"],
+    github: "https://github.com/igaboo/JS-Hangman",
   },
   {
     title: "Poker Hand Statistics",
     description: "A JavaScript program that generates card hands.",
     tags: ["JAVASCRIPT", "CSS", "HTML"],
+    github: "https://github.com/igaboo/card-generator",
   },
   {
     title: "Baking Buddy",
     description: "A digital cooking book for organizing your recipes.",
     tags: ["NEXTJS", "CRUD", "SCSS", "FIREBASE"],
+    github: "https://github.com/igaboo/next-baking-buddy",
   },
 ];
 
@@ -115,15 +118,17 @@ const Project = ({ project }) => {
 
 const SmallProject = ({ project }) => {
   return (
-    <div className={styles.card}>
-      <h4>{project.title}</h4>
-      <p>{project.description}</p>
-      <div className={styles.tags}>
-        {project.tags.map((tag, index) => {
-          return <code key={index}>{tag}</code>;
-        })}
+    <a href={project.github}>
+      <div className={styles.card}>
+        <h4>{project.title}</h4>
+        <p>{project.description}</p>
+        <div className={styles.tags}>
+          {project.tags.map((tag, index) => {
+            return <code key={index}>{tag}</code>;
+          })}
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
