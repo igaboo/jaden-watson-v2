@@ -18,18 +18,16 @@ const Hero = () => {
     <section className={`container ${styles.container}`}>
       <StaggeredAnimate>
         <h1>Hi, I'm Jaden</h1>
-        <h2>
-          I'm a designer & front-end developer.{" "}
-          <Tooltip tooltip="My Resume">
-            <a className="icon" href="/resume.pdf" download>
-              <FontAwesomeIcon icon={faFileArrowDown} />
-            </a>
-          </Tooltip>
-        </h2>
+        <h2>I'm a designer & front-end developer.</h2>
         <span>
           <Link href="/#contact">
             <a className="button">& I'm here to help</a>
           </Link>
+          <Tooltip tooltip="My Resume">
+            <a className="icon" href="/resume.pdf" download>
+              <FontAwesomeIcon icon={faFileArrowDown} size="3x" />
+            </a>
+          </Tooltip>
           <Tooltip tooltip="Twitter">
             <a href="https://twitter.com/oobagi" className="icon">
               <FontAwesomeIcon icon={faTwitter} size="3x" />

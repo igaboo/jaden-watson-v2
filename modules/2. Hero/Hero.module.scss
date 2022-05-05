@@ -1,6 +1,7 @@
 @import "../../scss/variables";
 
 .container {
+  max-width: $width-wide;
   span {
     margin-top: 1rem;
 
