@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../../scss/variables";
 
 .container {
   position: sticky;
@@ -19,8 +19,8 @@
   margin-inline: auto;
 
   background: #ffffffe6;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(16.8px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px);
 
   li:last-child {
     display: none;

@@ -1,12 +1,14 @@
 import {
   faBars,
+  faDiagramProject,
+  faLaptop,
   faListSquares,
   faMessage,
   faMoneyBill,
   faQuestion,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useReducer } from "react";
 
 import Dropdown from "../../components/Dropdown/react-dropdown";
@@ -14,6 +16,8 @@ import Dropdown from "../../components/Dropdown/react-dropdown";
 import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
+  const router = useRouter();
+
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -68,18 +72,30 @@ const Navbar = () => {
                 {
                   icon: faQuestion,
                   text: "About",
+                  func: () => {
+                    router.push("/#about");
+                  },
                 },
                 {
-                  icon: faListSquares,
+                  icon: faDiagramProject,
                   text: "Projects",
+                  func: () => {
+                    router.push("/#projects");
+                  },
                 },
                 {
-                  icon: faMoneyBill,
+                  icon: faLaptop,
                   text: "Hire",
+                  func: () => {
+                    router.push("/#hire");
+                  },
                 },
                 {
                   icon: faMessage,
                   text: "Contact",
+                  func: () => {
+                    router.push("/#contact");
+                  },
                 },
               ]}
               position="top-right"

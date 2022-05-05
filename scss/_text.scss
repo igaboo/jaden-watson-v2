@@ -80,10 +80,6 @@ h2 {
   color: $txt-accent;
 
   line-height: 1.5;
-
-  div {
-    display: inline;
-  }
 }
 
 h3 {
@@ -201,10 +197,6 @@ p {
 }
 
 @media screen and (max-width: 900px) {
-  h2 div {
-    display: block;
-  }
-
   .paragraph {
     max-width: none;
   }

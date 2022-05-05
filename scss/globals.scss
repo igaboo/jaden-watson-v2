@@ -25,7 +25,7 @@
 }
 
 hr {
-  max-width: calc($width - 2rem);
+  max-width: min(calc($width - 2rem), calc(100% - 10rem));
   border: 1px solid $bg-accent;
 
   margin-inline: auto;
@@ -65,8 +65,5 @@ hr {
 
     min-height: none;
     margin-block: 100px;
-  }
-
-  hr {
   }
 }

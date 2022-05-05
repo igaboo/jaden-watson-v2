@@ -1,12 +1,15 @@
-@import "../../styles/variables";
+@import "../../scss/variables";
 
-.icon {
+.wrapper {
   position: fixed;
   right: 1rem;
   z-index: 1;
-  cursor: pointer;
 
   transition: bottom $animation ease;
+}
+
+.icon {
+  cursor: pointer;
 
   color: $clr;
 }

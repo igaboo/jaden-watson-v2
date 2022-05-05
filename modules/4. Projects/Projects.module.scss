@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../../scss/variables";
 
 .container {
   h3 {
@@ -14,7 +14,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 120px;
   margin-top: 10rem;
 
   header {
@@ -34,6 +33,14 @@
     border-radius: 10px;
     overflow: hidden;
   }
+}
+
+.projectContainer:first-of-type .card {
+  margin-left: 5rem;
+}
+
+.projectContainer:not(:first-of-type) .card {
+  margin-right: 5rem;
 }
 
 .projectContainer:not(:first-of-type) {
@@ -67,8 +74,13 @@
     margin-top: 50px;
   }
 
-  .projectContainer {
-    gap: 50px;
+  .projectContainer header {
+    margin-top: 50px;
+  }
+
+  .projectContainer div {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .projectContainer,
@@ -76,5 +88,11 @@
     flex-direction: column-reverse;
 
     margin-top: 65px;
+  }
+
+  .projectContainer:not(:first-of-type) {
+    div:first-child {
+      margin-left: 5rem;
+    }
   }
 }

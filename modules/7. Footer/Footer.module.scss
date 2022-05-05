@@ -1,9 +1,9 @@
-@import "../../styles/variables";
+@import "../../scss/variables";
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem;
 
   max-width: $width-wide;
@@ -13,8 +13,8 @@
 .icons {
   margin-left: auto;
 
-  a:not(:first-child) {
-    margin-left: 1rem;
+  span:not(:first-child) {
+    margin-left: 1rem !important;
   }
 }
 
@@ -22,13 +22,14 @@
   .container {
     text-align: center;
 
+    height: 10rem;
+
     display: flex;
     flex-direction: column-reverse;
-
-    gap: 1rem;
   }
 
   .icons {
+    margin-bottom: 1rem;
     margin-left: 0;
   }
 }

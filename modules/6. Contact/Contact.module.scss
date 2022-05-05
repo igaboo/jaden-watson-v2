@@ -1,3 +1,5 @@
+@import "../../scss/variables";
+
 .container {
   max-width: 800px;
   text-align: center;
@@ -9,8 +11,18 @@
     margin-inline: auto;
   }
 
+  p {
+    margin-inline: auto;
+  }
+
   button {
     width: fit-content;
     margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container p {
+    max-width: 550px;
   }
 }

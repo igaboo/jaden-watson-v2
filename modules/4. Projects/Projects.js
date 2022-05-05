@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
+import Animate from "../wrappers/Animate";
+import Tooltip from "../../components/ToolTip/Tooltip";
+
 const projects = [
   {
     title: "Notely",
@@ -13,6 +16,8 @@ const projects = [
       "Notely is a notes app built with React.js. With a focus on students, Notely allows you to organize your notes into courses. You can also create tags to easily sort through and find notes.",
     tags: ["REACTJS", "FIREBASE", "CRUD", "HTML", "SCSS"],
     image: "/notely.png",
+    site: "https://delightful-beijinho-c9bd12.netlify.app/",
+    github: "https://github.com/igaboo/notely",
   },
   {
     title: "dropdown-component",
@@ -20,6 +25,8 @@ const projects = [
       "dropdown-component is a React component I built to simplify my drop down menus. It utilizes hooks to allow for unlimited menus, all with custom buttons, icons, and colors.",
     tags: ["REACTJS", "COMPONENTS", "SCSS"],
     image: "/dropdown.png",
+    site: "https://cheerful-tiramisu-4497c1.netlify.app/",
+    github: "https://github.com/igaboo/dropdown-component",
   },
 ];
 
@@ -48,11 +55,14 @@ const Projects = () => {
       {projects.map((project, index) => {
         return <Project key={index} project={project} />;
       })}
+
       <h3> Smaller Projects </h3>
       <div className={styles.smallProjectContainer}>
-        {smallProjects.map((project, index) => {
-          return <SmallProject key={index} project={project} />;
-        })}
+        <Animate>
+          {smallProjects.map((project, index) => {
+            return <SmallProject key={index} project={project} />;
+          })}
+        </Animate>
       </div>
       <Alert
         icon={faGithub}
@@ -70,27 +80,35 @@ const Projects = () => {
 const Project = ({ project }) => {
   return (
     <div className={styles.projectContainer}>
-      <div>
-        <header>
-          <h4>{project.title}</h4>
-          <button className="icon">
-            <FontAwesomeIcon icon={faGithub} size="2x" />
-          </button>
-          <button className="icon">
-            <FontAwesomeIcon icon={faLink} size="2x" />
-          </button>
-        </header>
+      <Animate>
+        <div>
+          <header>
+            <h4>{project.title}</h4>
+            <Tooltip tooltip="GitHub">
+              <a href={project.github} className="icon">
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </a>
+            </Tooltip>
+            <Tooltip tooltip="Website">
+              <a href={project.site} className="icon">
+                <FontAwesomeIcon icon={faLink} size="2x" />
+              </a>
+            </Tooltip>
+          </header>
 
-        <p>{project.description}</p>
-        <div className={styles.tags}>
-          {project.tags.map((tag, index) => {
-            return <code key={index}>{tag}</code>;
-          })}
+          <p>{project.description}</p>
+          <div className={styles.tags}>
+            {project.tags.map((tag, index) => {
+              return <code key={index}>{tag}</code>;
+            })}
+          </div>
         </div>
-      </div>
-      <div className={styles.card}>
-        <img src={project.image} />
-      </div>
+        <a href={project.site}>
+          <div className={styles.card}>
+            <img src={project.image} />
+          </div>
+        </a>
+      </Animate>
     </div>
   );
 };

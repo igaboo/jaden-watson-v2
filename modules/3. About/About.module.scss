@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../../scss/variables";
 
 .container {
   h2 {
@@ -15,8 +15,11 @@
 .grid {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: auto auto;
-  gap: 5rem;
+  grid-template-columns: 1.5fr 1fr;
+
+  .leftcol {
+    margin-right: 5rem;
+  }
 }
 
 .cards {
@@ -32,6 +35,8 @@
   grid-template-columns: 60px 1fr;
   align-items: center;
 
+  width: 100%;
+
   padding: 13px;
 
   border-radius: 10px;
@@ -44,11 +49,24 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .grid {
     display: flex;
     flex-direction: column-reverse;
-    gap: 28px;
+
+    img {
+      margin-bottom: 2rem;
+    }
+
+    .leftcol {
+      margin-right: 0;
+    }
   }
 
   .cards {

@@ -33,10 +33,17 @@ button,
 
   transition: color $animation ease;
 
+  border-radius: 0;
+
   &:hover {
     color: $clr-dark;
     background-color: transparent;
   }
+}
+
+.fakeFontAwesome {
+  width: calc(100% - 30px);
+  height: 100%;
 }
 
 @media screen and (max-width: 900px) {
@@ -47,5 +54,9 @@ button,
 
   .icon:not([id]) {
     font-size: inherit;
+  }
+
+  .fakeFontAwesome {
+    width: calc(100% - 13px);
   }
 }
