@@ -4,8 +4,9 @@
   max-width: 800px;
   text-align: center;
 
+  min-height: calc(100vh - 10rem - 5rem - 200px);
+
   display: flex;
-  gap: 60px;
 
   h2 {
     margin-inline: auto;
@@ -18,11 +19,13 @@
   button {
     width: fit-content;
     margin-inline: auto;
+
+    margin-top: 2rem;
   }
 }
 
 @media screen and (max-width: 900px) {
   .container p {
-    max-width: 550px;
+    max-width: 400px;
   }
 }

@@ -15,7 +15,7 @@ function StaggeredAnimate({ children }) {
               bounce: 0.3,
               delay,
             }}
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: 25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ amount: 0.3, once: true }}
           >

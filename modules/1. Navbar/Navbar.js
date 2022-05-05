@@ -99,6 +99,7 @@ const Navbar = () => {
                 },
               ]}
               position="top-right"
+              textOnly
             ></Dropdown>
           </h5>
         </li>

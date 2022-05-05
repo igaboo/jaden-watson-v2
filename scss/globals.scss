@@ -63,7 +63,11 @@ hr {
 
     padding: 1rem;
 
-    min-height: none;
+    min-height: calc(100vh - 5rem - 200px);
     margin-block: 100px;
+  }
+
+  .anchor {
+    top: -100px;
   }
 }

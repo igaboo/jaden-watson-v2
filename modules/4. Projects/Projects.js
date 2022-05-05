@@ -44,7 +44,7 @@ const smallProjects = [
   {
     title: "Baking Buddy",
     description: "A digital cooking book for organizing your recipes.",
-    tags: ["NEXTJS", "REACTJS", "CRUD", "SCSS", "FIREBASE"],
+    tags: ["NEXTJS", "CRUD", "SCSS", "FIREBASE"],
   },
 ];
 

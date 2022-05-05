@@ -10,7 +10,9 @@ function Contact() {
           I check my inbox every day, so I should be able to respond within the
           next day. I look forward to hearing from you!
         </p>
-        <button>jadenwatsond@gmail.com</button>
+        <a href="mailto: jadenwatsond@gmail.com">
+          <button>jadenwatsond@gmail.com</button>
+        </a>
       </Animate>
     </section>
   );

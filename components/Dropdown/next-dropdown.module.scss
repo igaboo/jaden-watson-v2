@@ -46,7 +46,7 @@ $animation-time: 200ms;
   flex-direction: column;
   z-index: 1;
 
-  width: 10rem !important;
+  // width: 10rem !important;
 
   box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.1);
 
@@ -68,6 +68,8 @@ $animation-time: 200ms;
     align-items: center;
     flex-direction: row-reverse;
     gap: 5px;
+
+    width: 100%;
 
     cursor: pointer;
     font: inherit;

@@ -11,6 +11,8 @@
 
   p {
     color: $txt;
+
+    margin-inline: auto;
   }
 
   a {
@@ -44,5 +46,11 @@
     top: 0;
 
     background-color: $clr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container p {
+    max-width: 300px;
   }
 }

@@ -155,13 +155,6 @@ p {
   margin-left: -0.7em;
 }
 
-@media screen and (max-width: 1600px) {
-  .code::before {
-    position: relative;
-    margin-left: 0;
-  }
-}
-
 .code-inline {
   color: $txt;
 }
@@ -194,6 +187,13 @@ p {
   right: 0;
 
   background-color: $bg-light;
+}
+
+@media screen and (max-width: 1600px) {
+  .code::before {
+    position: relative;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 900px) {

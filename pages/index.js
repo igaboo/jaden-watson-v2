@@ -31,16 +31,12 @@ export default function Home() {
         <Hero />
       </div>
       <Animate>
-        <hr />
         <div className="anchor" id="about"></div>
         <About />
-        <hr />
         <div className="anchor" id="projects"></div>
         <Projects />
-        <hr />
-        <div className="anchor" id="hire"></div>
-        <Hire />
-        <hr />
+        {/* <div className="anchor" id="hire"></div> */}
+        {/* <Hire /> */}
         <div className="anchor" id="contact"></div>
         <Contact />
       </Animate>

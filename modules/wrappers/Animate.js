@@ -10,7 +10,7 @@ function Animate({ children }) {
         ) : (
           <motion.div
             transition={{ type: "spring", duration: 1, bounce: 0.3 }}
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: 25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ amount: 0.1, once: true }}
           >
