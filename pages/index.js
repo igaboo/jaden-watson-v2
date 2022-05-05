@@ -18,6 +18,7 @@ export default function Home() {
 
   return (
     <>
+      <ScrollToTop visible={!inView} />
       <Head>
         <title>Jaden Watson | Portfolio</title>
         <meta
@@ -41,8 +42,6 @@ export default function Home() {
         <Contact />
       </Animate>
       <Footer />
-
-      <ScrollToTop visible={!inView} />
     </>
   );
 }
