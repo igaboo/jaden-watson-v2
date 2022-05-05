@@ -2,7 +2,7 @@ import styles from "./ScrollToTop.module.scss";
 
 import { faSquareCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Tooltip from "../../components/ToolTip/Tooltip";
+import Tooltip from "../ToolTip/Tooltip";
 
 function ScrollToTop({ visible }) {
   const handleScrollToTop = () => {
