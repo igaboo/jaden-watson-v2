@@ -69,6 +69,8 @@ h1 {
   font-size: clamp(42px, 5vw, 125px);
   font-weight: 700;
 
+  letter-spacing: -2px;
+
   transform-origin: 50% 50%;
 
   line-height: 1;
@@ -77,6 +79,9 @@ h1 {
 h2 {
   font-size: clamp(25px, 3vw, 45px);
   font-weight: 600;
+
+  letter-spacing: -1px;
+
   color: $txt-accent;
 
   line-height: 1.5;
@@ -85,6 +90,9 @@ h2 {
 h3 {
   font-size: clamp(20px, 3vw, 35px);
   font-weight: 600;
+
+  letter-spacing: -1px;
+
   text-align: center;
 }
 
@@ -101,6 +109,8 @@ h3::after {
 h4 {
   font-size: clamp(20px, 2vw, 30px);
   font-weight: 600;
+
+  letter-spacing: -1px;
 }
 
 h5 {
