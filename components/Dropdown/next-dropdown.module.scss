@@ -1,12 +1,14 @@
-$accent: #cacaca;
-$background: rgb(255, 255, 255);
-$text: rgb(128, 128, 128);
-$text-secondary: rgb(209, 33, 33);
-$text-accent: rgb(202, 202, 202);
-$dim: rgb(233, 233, 233);
+@import "../../scss/variables";
 
-$active: #ff9c51;
-$hover: rgb(41, 41, 41);
+$accent: $bg-accent;
+$background: $bg;
+$text: $txt;
+$text-secondary: $txt-accent;
+$text-accent: $txt-accent;
+$dim: $bg-accent;
+
+$active: $clr;
+$hover: $bg-opaque;
 
 $animation-time: 200ms;
 
