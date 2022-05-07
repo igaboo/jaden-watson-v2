@@ -1,0 +1,12 @@
+.container {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  right: 50%;
+
+  transition: opacity 200ms ease;
+}
+
+.active {
+  opacity: 0;
+}
