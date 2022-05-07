@@ -29,18 +29,22 @@
   }
 
   .card {
-    border: 1px solid $bg-accent;
-    border-radius: 10px;
     overflow: hidden;
 
+    padding: 1rem;
+
+    border: 1px solid $clr;
+    border-radius: 20px;
+    border-bottom: 5px solid $clr;
+
+    transition: transform $animation ease, filter $animation ease;
+
     img {
-      transition: transform $animation ease, filter $animation ease;
-      filter: brightness(0.9);
+      border-radius: 10px;
     }
 
-    img:hover {
+    &:hover {
       transform: scale(1.05);
-      filter: brightness(1);
     }
   }
 }
@@ -62,7 +66,7 @@
 
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 58px;
+  gap: clamp(10px, 2vw, 58px);
 
   .card {
     cursor: pointer;
