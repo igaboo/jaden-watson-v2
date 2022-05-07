@@ -1,20 +1,22 @@
 import Head from "next/head";
 
-import Animate from "../modules/wrappers/Animate";
+import Animate from "../layout/wrappers/Animate";
 
-import Navbar from "../modules/1. Navbar/Navbar";
-import Hero from "../modules/2. Hero/Hero";
-import About from "../modules/3. About/About";
-import Projects from "../modules/4. Projects/Projects";
-import Hire from "../modules/5. Hire/Hire";
-import Contact from "../modules/6. Contact/Contact";
-import Footer from "../modules/7. Footer/Footer";
-import ScrollToTop from "../modules/ScrollToTop/ScrollToTop";
+import Navbar from "../layout/1. Navbar/Navbar";
+import Hero from "../layout/2. Hero/Hero";
+import About from "../layout/3. About/About";
+import Projects from "../layout/4. Projects/Projects";
+import Hire from "../layout/5. Hire/Hire";
+import Contact from "../layout/6. Contact/Contact";
+import Footer from "../layout/7. Footer/Footer";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
 
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
-  const { ref, inView } = useInView({ initialInView: true });
+  const [ref, inView] = useInView({ initialInView: true });
+  const [navRef, navInView] = useInView({ initialInView: true });
 
   return (
     <>
@@ -27,7 +29,9 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div ref={navRef}></div>
       <Navbar />
+
       <div ref={ref}>
         <Hero />
       </div>
@@ -42,6 +46,7 @@ export default function Home() {
         <Contact />
       </Animate>
       <Footer />
+      <ScrollIndicator visible={!navInView} />
     </>
   );
 }
