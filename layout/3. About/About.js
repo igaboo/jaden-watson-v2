@@ -32,26 +32,32 @@ const NextIcon = () => {
 const technologies = [
   {
     title: "JavaScript",
+    years: 1,
     icon: faJs,
   },
   {
     title: "React.js",
+    years: 1,
     icon: faReact,
   },
   {
     title: "Next.js",
+    years: 1,
     customIcon: <NextIcon />,
   },
   {
     title: "Node.js",
+    years: 1,
     icon: faNodeJs,
   },
   {
     title: "HTML5",
+    years: 3,
     icon: faHtml5,
   },
   {
     title: "Sass",
+    years: 1,
     icon: faSass,
   },
 ];
@@ -77,14 +83,15 @@ const About = () => {
             <br />
             Nowadays, I've put my full focus on web development. I'm currently
             practicing with React to create quick and responsive web apps, some
-            of which you can view on my GitHub.
+            of which you can view on my{" "}
+            <a href="https://github.com/igaboo">GitHub.</a>
             <br />
             <br />
             The technologies I work with currently:
           </p>
           <div className={styles.cards}>
             <Animate>
-              {technologies.map(({ title, icon, customIcon }) => {
+              {technologies.map(({ title, years, icon, customIcon }) => {
                 return (
                   <div className={styles.card}>
                     {customIcon ? (
@@ -94,13 +101,16 @@ const About = () => {
                     )}
 
                     <p className="heavy">{title}</p>
+                    <p className="mini">
+                      {years} {years === 1 ? "year" : "years"}
+                    </p>
                   </div>
                 );
               })}
             </Animate>
           </div>
         </div>
-        <div className="item">
+        <div className={`item ${styles.imgContainer}`}>
           <img src="/hero.jpg" width={600} height={600} />
         </div>
       </div>
