@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 const Button = ({ text, icon, color, func, iconsOnly, textOnly }) => {
   const changeBackground = (e) => {
     !color
-      ? (e.target.style.backgroundColor = "#f5f5f5")
+      ? (e.target.style.backgroundColor = "#333")
       : (e.target.style.backgroundColor = `rgba(${color}, .2)`);
   };
   const removeBackground = (e) => {
