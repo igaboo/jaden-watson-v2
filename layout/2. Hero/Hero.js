@@ -18,7 +18,10 @@ const Hero = () => {
     <section className={`container ${styles.container}`}>
       <StaggeredAnimate>
         <h1>Hi, I'm Jaden</h1>
-        <h2>I'm a designer & front-end developer.</h2>
+        <h2>
+          I'm a <a className="underline">designer</a> &{" "}
+          <a className="code-inline">front-end developer.</a>
+        </h2>
         <span>
           <Link href="/#contact">
             <a className="button">& I'm here to help</a>
