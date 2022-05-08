@@ -1,16 +1,14 @@
-@import "../../scss/variables";
-
 .container {
   margin-top: 100px;
   text-align: center;
 
   svg {
-    color: $txt-accent;
+    color: var(--txt-accent);
     margin-bottom: 30px;
   }
 
   p {
-    color: $txt;
+    color: var(--txt);
 
     margin-inline: auto;
   }
@@ -18,11 +16,11 @@
   a {
     position: relative;
 
-    transition: color $animation ease;
+    transition: color var(--animation) ease;
   }
 
   a:hover {
-    color: $bg;
+    color: var(--bg);
   }
 
   a::after {
@@ -37,15 +35,15 @@
     right: 0;
 
     transition-property: top, background-color;
-    transition-duration: $animation;
+    transition-duration: var(--animation);
 
-    background-color: $clr-dimmed;
+    background-color: var(--clr-dimmed);
   }
 
   a:hover::after {
     top: 0;
 
-    background-color: $clr;
+    background-color: var(--clr);
   }
 }
 

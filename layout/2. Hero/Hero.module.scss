@@ -1,7 +1,5 @@
-@import "../../scss/variables";
-
 .container {
-  max-width: $width-wide;
+  max-width: var(--width-wide);
 
   span {
     margin-top: 1rem;
@@ -12,7 +10,7 @@
 
     width: fit-content;
 
-    color: $clr;
+    color: var(--clr);
 
     svg {
       font-size: clamp(30px, 5vw, 45px);

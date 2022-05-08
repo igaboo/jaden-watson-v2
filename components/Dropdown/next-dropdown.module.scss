@@ -1,19 +1,17 @@
-@import "../../scss/variables";
+$accent: var(--bg-accent);
+$background: var(--bg);
+$text: var(--txt);
+$text-secondary: var(--txt-accent);
+$text-accent: var(--txt-accent);
+$dim: var(--bg-accent);
 
-$accent: $bg-accent;
-$background: $bg;
-$text: $txt;
-$text-secondary: $txt-accent;
-$text-accent: $txt-accent;
-$dim: $bg-accent;
-
-$active: $clr;
-$hover: $bg-opaque;
+$active: var(--clr);
+$hover: var(--bg-opaque);
 
 $animation-time: 200ms;
 
 .btnIcon {
-  transition: color $animation-time ease;
+  transition: color var(--animation-time) ease;
   cursor: pointer;
 }
 
@@ -32,7 +30,7 @@ $animation-time: 200ms;
 }
 
 .wrapper {
-  transition: all $animation-time ease;
+  transition: all var(--animation-time) ease;
 }
 
 .deactivated {
@@ -55,13 +53,14 @@ $animation-time: 200ms;
   overflow: hidden;
 
   border-radius: 10px;
-  border: 1px solid $accent;
+  border: 1px solid var(--accent);
 
-  background-color: $background;
+  background-color: var(--background);
 
   position: absolute;
 
-  transition: opacity $animation-time ease, visibility $animation-time ease;
+  transition: opacity var(--animation-time) ease,
+    visibility var(--animation-time) ease;
 
   button {
     padding: 10px;
@@ -77,19 +76,19 @@ $animation-time: 200ms;
     font: inherit;
     font-weight: 500;
 
-    color: $text;
-    background-color: $background;
+    color: var(--text);
+    background-color: var(--background);
 
     border: none;
     border-radius: 0;
   }
 
   button + button {
-    border-top: 1px solid $dim;
+    border-top: 1px solid var(--dim);
   }
 
   svg {
-    color: $text-accent;
+    color: var(--text-accent);
   }
 }
 
@@ -105,7 +104,7 @@ $animation-time: 200ms;
 
 .card {
   border-radius: 10px;
-  border: 1px solid $dim;
+  border: 1px solid var(--dim);
 
   margin-inline: auto;
 
@@ -126,7 +125,7 @@ $animation-time: 200ms;
   footer {
     margin-top: auto;
 
-    border-top: 1px solid $dim;
+    border-top: 1px solid var(--dim);
   }
 }
 

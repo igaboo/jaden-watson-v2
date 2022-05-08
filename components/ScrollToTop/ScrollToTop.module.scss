@@ -1,17 +1,15 @@
-@import "../../scss/variables";
-
 .wrapper {
   position: fixed;
   right: 1rem;
   z-index: 1;
 
-  transition: bottom $animation ease;
+  transition: bottom var(--animation) ease;
 }
 
 .icon {
   cursor: pointer;
 
-  color: $clr;
+  color: var(--clr);
 }
 
 @media screen and (max-width: 900px) {

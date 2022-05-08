@@ -1,5 +1,3 @@
-@import "./variables";
-
 button,
 .button {
   cursor: pointer;
@@ -13,13 +11,13 @@ button,
   font-size: clamp(14px, 2vw, 24px);
   font-weight: 600;
 
-  background-color: $clr;
-  color: $bg;
+  background-color: var(--clr);
+  color: var(--bg);
 
-  transition: background-color $animation ease;
+  transition: background-color var(--animation) ease;
 
   &:hover {
-    background-color: $clr-dark;
+    background-color: var(--clr-dark);
   }
 }
 
@@ -28,15 +26,15 @@ button,
 
   padding: 0;
 
-  color: $clr;
+  color: var(--clr);
   background-color: transparent;
 
-  transition: color $animation ease;
+  transition: color var(--animation) ease;
 
   border-radius: 0;
 
   &:hover {
-    color: $clr-dark;
+    color: var(--clr-dark);
     background-color: transparent;
   }
 }

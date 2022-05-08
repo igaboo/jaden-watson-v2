@@ -1,9 +1,7 @@
-@import "./variables";
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap");
 html {
   font-family: "Poppins", sans-serif;
-  color: $txt;
+  color: var(--txt);
 }
 
 a {
@@ -20,11 +18,11 @@ code {
 
   padding: 5px 10px;
 
-  border: 1px solid $bg-accent;
+  border: 1px solid var(--bg-accent);
   border-radius: 5px;
 
   transition-property: border, background-color, color;
-  transition-duration: $animation-quick;
+  transition-duration: var(--animation-quick);
 }
 
 code:not(:last-child) {
@@ -32,9 +30,9 @@ code:not(:last-child) {
 }
 
 code:hover {
-  border: 1px solid $clr;
-  background-color: $clr;
-  color: $bg;
+  border: 1px solid var(--clr);
+  background-color: var(--clr);
+  color: var(--bg);
 }
 
 .hero {
@@ -55,12 +53,12 @@ code:hover {
   content: "Jaden";
   position: relative;
 
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 .hero::after {
   content: " Watson";
-  color: $txt;
+  color: var(--txt);
 
   font-weight: 700;
 }
@@ -82,7 +80,7 @@ h2 {
 
   letter-spacing: -1px;
 
-  color: $txt-accent;
+  color: var(--txt-accent);
 
   line-height: 1.5;
 }
@@ -98,12 +96,12 @@ h3 {
 
 h3::before {
   content: "{";
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 h3::after {
   content: "}";
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 h4 {
@@ -116,14 +114,14 @@ h4 {
 h5 {
   font-size: 20px;
   font-weight: 500;
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 p {
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 500;
 
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 .paragraph {
@@ -138,7 +136,7 @@ p {
 .heavy {
   font-size: 24px;
   font-weight: 600;
-  color: $txt;
+  color: var(--txt);
 }
 
 .highlighted {
@@ -147,44 +145,44 @@ p {
 }
 
 .code {
-  color: $txt;
+  color: var(--txt);
 }
 
 .code::after {
   content: "/>";
 
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 .code::before {
   content: "<";
 
-  color: $txt-accent;
+  color: var(--txt-accent);
 
   position: absolute;
   margin-left: -0.7em;
 }
 
 .code-inline {
-  color: $txt;
+  color: var(--txt);
 }
 
 .code-inline::after {
   content: "/>";
 
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 .code-inline::before {
   content: "<";
 
-  color: $txt-accent;
+  color: var(--txt-accent);
 }
 
 .underline {
   position: relative;
 
-  color: $txt;
+  color: var(--txt);
 }
 
 .underline::after {
@@ -196,7 +194,7 @@ p {
   left: 0;
   right: 0;
 
-  background-color: $bg-light;
+  background-color: var(--bg-light);
 }
 
 @media screen and (max-width: 1600px) {
